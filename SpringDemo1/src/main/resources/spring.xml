@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+
+<!--    <bean id = "alien" class="com.kabin.Alien" scope="prototype"> </bean>-->
+<!--    Constructor injection-->
+    <bean id="alien" class="com.kabin.Alien" autowire="byType">
+<!--        <constructor-arg type="int" value="34"> </constructor-arg>-->
+<!--        <constructor-arg type="com.kabin.Laptop" ref="laptop"> </constructor-arg>-->
+        <!-- if we have different int property then only type won't work we can specify index number
+       index = "0" etc , we can specify name also as name="age" -->
+            <!--  Setter injection -->
+        <property name="age" value="21"> </property>
+        <property name="com">
+<!--            Inner bean for Alien can only used by alien-->
+            <bean id = "com1" class="com.kabin.Laptop" primary="true"> </bean>
+        </property>
+
+<!--        if we want to use primitive values then we use value="", and that value is assigned when object is created, through setter, that's why it is called setter injection-->
+
+    </bean>
+
+<!--    <bean id = "com1" class="com.kabin.Laptop" primary="true"> </bean>-->
+<!--    if I don't want object creation as soon as container is loaded then we use lazy-init true-->
+<!--    <bean id = "com2" class="com.kabin.Desktop" lazy-init="true"> </bean>-->
+
+
+</beans>
