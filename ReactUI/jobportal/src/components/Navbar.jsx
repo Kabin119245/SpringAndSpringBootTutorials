@@ -33,8 +33,12 @@ const Navbar = () => {
                 </Button>
               </Box>
               <Box sx={{ m: 0.5, mx: "auto", width: 180 }}>
-                <Button variant="outlined" href="https://telusko.com/">
-                  Contact Us
+                <Button
+                  variant="outlined"
+                  href="https://kabin119245.github.io/protfolio/index.html"
+                  target="_blank"
+                >
+                  Contact Me
                 </Button>
               </Box>
             </Toolbar>
