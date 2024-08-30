@@ -1,5 +1,6 @@
-package com.kabin.SpringSecTelusko;
+package com.kabin.SpringSecTelusko.controller;
 
+import com.kabin.SpringSecTelusko.model.Student;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.security.web.csrf.CsrfToken;
 import org.springframework.stereotype.Controller;

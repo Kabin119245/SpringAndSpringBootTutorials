@@ -1,4 +1,4 @@
-package com.kabin.SpringSecTelusko;
+package com.kabin.SpringSecTelusko.controller;
 
 
 import jakarta.servlet.http.HttpServletRequest;
