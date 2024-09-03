@@ -23,4 +23,8 @@ public class UserService {
     public Iterable<Users> getAllUsers() {
         return userRepo.findAll();
     }
+
+    public String verify(Users users) {
+
+    }
 }

@@ -24,4 +24,14 @@ public class UserController {
     public Iterable<Users> getAllUsers() {
         return service.getAllUsers();
     }
+
+    @PostMapping("/login")
+    public String login(@RequestBody Users users) {
+        System.out.println(users);
+        return service.verify(users);
+    }
+    @GetMapping("/greet")
+    public String greet() {
+        return "Hello from not secured";
+    }
 }

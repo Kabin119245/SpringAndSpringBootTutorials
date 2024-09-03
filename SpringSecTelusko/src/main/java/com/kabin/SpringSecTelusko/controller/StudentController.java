@@ -44,4 +44,10 @@ public class StudentController {
         return student;
     }
 
+    @GetMapping("/secured")
+    public String secured( ) {
+        return "Hello, Spring Security! from secured API";
+    }
+
+
 }
