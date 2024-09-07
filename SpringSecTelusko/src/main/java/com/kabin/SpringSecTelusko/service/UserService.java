@@ -13,6 +13,9 @@ import org.springframework.stereotype.Service;
 public class UserService {
 
     @Autowired
+    private JWTService jwtService;
+
+    @Autowired
     private UserRepo userRepo;
 
     private BCryptPasswordEncoder encoder = new BCryptPasswordEncoder(12);
@@ -34,7 +37,8 @@ public class UserService {
                 .authenticate(new UsernamePasswordAuthenticationToken(users.getUsername(),
                         users.getPassword()));
         if (authentication.isAuthenticated()) {
-            return "User authenticated successfully";
+         //   return "User authenticated successfully";
+            return jwtService.generateToken(users.getUsername());
         } else {
             return "Invalid username or password";
         }
