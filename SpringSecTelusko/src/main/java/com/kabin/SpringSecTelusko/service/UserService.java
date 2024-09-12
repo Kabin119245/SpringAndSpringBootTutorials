@@ -24,7 +24,8 @@ public class UserService {
 
     public Users register(Users user) {
         user.setPassword(encoder.encode(user.getPassword()));
-      return userRepo.save(user);
+       userRepo.save(user);
+       return user;
     }
 
     //return list of users
